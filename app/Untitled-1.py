@@ -1,0 +1,17 @@
+
+City = InlineKeyboardMarkup(keyboard=[[InlineKeyboardButton(text='Актобе', callback_data='Aktobe')],
+                                     [InlineKeyboardButton(text='Алматы', callback_data='Almaty')],
+                                     [InlineKeyboardButton(text='Астана', callback_data='Astana')],
+                                     [InlineKeyboardButton(text='Атырау', callback_data='Atyrau')],
+                                     [InlineKeyboardButton(text='Караганда', callback_data='Karaganda')],
+                                     [InlineKeyboardButton(text='Кокшетау', callback_data='Kokshetau')],
+                                     [InlineKeyboardButton(text='Кызылорда', callback_data='Kizilorda')],
+                                     [InlineKeyboardButton(text='Павлодар', callback_data='Pavlodar')],
+                                     [InlineKeyboardButton(text='Петропавловск', callback_data='Petropavlovsk')],
+                                     [InlineKeyboardButton(text='Семей', callback_data='Semey')],
+                                     [InlineKeyboardButton(text='Степногорск', callback_data='Stepnogorsk')],                                     [InlineKeyboardButton(text='Темиртау')],
+                                     [InlineKeyboardButton(text='Туркестан', callback_data='Turkestan')],
+                                     [InlineKeyboardButton(text='Уральск', callback_data='Uralsk')],
+                                     [InlineKeyboardButton(text='Усть-Каменогорск', callback_data='Ust-Kamenogorsk')],
+                                     [InlineKeyboardButton(text='Шымкент', callback_data='Shtmkent')],
+                                     [InlineKeyboardButton(text='Экибастуз', callback_data='Ekibastuz')]])
