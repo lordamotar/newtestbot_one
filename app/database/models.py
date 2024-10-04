@@ -19,7 +19,7 @@ class User(Base):
     
 
 class Category(Base):
-    __tablename__ = 'categories'
+    __tablename__ = 'Categories'
     
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(60))
@@ -29,13 +29,13 @@ class Item(Base):
     __tablename__ = 'Items'
     
     id: Mapped[int] = mapped_column(primary_key=True)
-    city: Mapped[str] = mapped_column(String(60))
+    name: Mapped[str] = mapped_column(String(60))
     address: Mapped[str] = mapped_column(String(60))
     weekdays_time: Mapped[str] = mapped_column(String(60))
     weekend_time: Mapped[str] = mapped_column(String(60))
     contact: Mapped[str] = mapped_column(String(60))
     geo_link: Mapped[str] = mapped_column(String(60))
-    cityes: Mapped[int] = mapped_column(ForeignKey('categories.id'))
+    cityes: Mapped[int] = mapped_column(ForeignKey('Categories.id'))
     
 async def async_main():
         async with engine.begin() as conn:
