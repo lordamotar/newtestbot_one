@@ -3,10 +3,10 @@ from aiogram import Bot, Dispatcher
 
 from app.handlers import router
 from app.database.models import async_main
-
+from connfig import TOKEN
 async def main():
     await async_main()
-    bot = Bot(token='7298028181:AAHcOWZzIUDYbqWoYwp_-3B4CbBEMy7uYn8')
+    bot = Bot(token='TOKEN')
     dp = Dispatcher()
     dp.include_router(router)
     await dp.start_polling(bot)
