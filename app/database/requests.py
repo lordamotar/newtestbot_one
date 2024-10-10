@@ -1,5 +1,5 @@
 from app.database.models import async_session
-from app.database.models import User, Category, Item
+from app.database.models import User, Category, Item, Service
 from sqlalchemy import select
 
 
@@ -25,3 +25,11 @@ async def get_category_item(category_id):
 async def get_item(item_id):
     async with async_session() as session:
         return await session.scalar(select(Item).where(Item.id == item_id))
+
+async def get_service_cities():
+    async with async_session() as session:
+        return await session.scalars(select(Service.name).distinct())
+
+async def get_service_by_city(city_name):
+    async with async_session() as session:
+        return await session.scalars(select(Service).where(Service.name == city_name))
