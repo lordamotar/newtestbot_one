@@ -38,6 +38,26 @@ class Item(Base):
     category: Mapped[int] = mapped_column(ForeignKey('categories.id'))
 
 
+class Street(Base):
+    __tablename__ = 'streets'
+    
+    id: Mapped[int] = mapped_column(primary_key=True)
+    street: Mapped[str] = mapped_column(String(60))
+    category: Mapped[int] = mapped_column(ForeignKey('categories.id'))
+
+
+class Service(Base):
+    __tablename__ = 'services'
+    
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(60))
+    address: Mapped[str] = mapped_column(String(60))
+    weekdays_time: Mapped[str] = mapped_column(String(60))
+    weekend_time: Mapped[str] = mapped_column(String(60))
+    contact: Mapped[str] = mapped_column(String(60))
+    geo_link: Mapped[str] = mapped_column(String(60))
+    category: Mapped[int] = mapped_column(ForeignKey('categories.id'))
+    
 async def async_main():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
