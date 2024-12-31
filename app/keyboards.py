@@ -54,6 +54,7 @@ async def items(category_id):
     ))
     return keyboard.adjust(2).as_markup()
 
+
 async def service_cities():
     all_cities = await get_service_cities()
     keyboard = InlineKeyboardBuilder()
@@ -67,6 +68,7 @@ async def service_cities():
         callback_data='back_to_main'
     ))
     return keyboard.adjust(2).as_markup()
+
 
 async def service_items(city_name):
     services = await get_service_by_city(city_name)
